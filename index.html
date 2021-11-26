@@ -6,20 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPhone</title>
     <style>
+       
         .container{
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .iPhone{
-          width: 269.76px;
-          height: 570.24px;
-          background-color: transparent;
-          border: 14px solid black;
-          border-radius: 49px;
-          position: relative;
-          box-shadow: 1px 1px 18px #434343;;
+        .outer{
+            width: 274px;
+            height: 570px;
+            position: absolute;
+            border-radius: 35px;
+            overflow: hidden;
         }
+        .iPhone{
+            width: 269.76px;
+            height: 570.24px;
+            background-color: transparent;
+            border: 14px solid black;
+            border-radius: 49px;
+            position: relative;
+            box-shadow: 1px 1px 18px #000;
+            left:2px;
+        }
+       
         .iPhone::before{
             content:"";
             position: absolute;
@@ -31,17 +41,7 @@
             border-radius: 30px;
             z-index: 2;
         }
-        .iPhone::after{
-            content: "";
-            position: absolute;
-            top:0;
-            left:0;
-            background: url('wallpaper1.jpg') no-repeat center center;
-            width:100%;
-            height: 100%;
-            z-index: -1;
-            border-radius: 10px;
-        }
+        
         .first{
             position: absolute;
             top: 78px;
@@ -81,17 +81,70 @@
             background-color: black;
             border-radius: 19%;
         }
+        .outer::before{
+            content: "";
+            position: absolute;
+            width:200px;
+            height:200px;
+            top:30%;
+            left:10%;
+            border-radius:50%;
+             background: linear-gradient(to left, #1CB5E0 , #3d3d78 );
+             z-index: -1;
+             box-shadow: 0px 0px 20px #3d3d78;
+        }
+        .outer::after{
+            content:"";
+            position: absolute;
+            top:15%;
+            left:-50%;
+            border-radius: 50%;
+            width:380px;
+            height: 380px;
+            background: linear-gradient(to left, #1CB5E0 , #3d3d78 );
+            z-index: -2;
+            box-shadow: 0px 0px 80px #3d3d78;
+        }
+        .outerspan::before{
+            content:"";
+            position: absolute;
+            top:5%;
+            left:-50%;
+            border-radius: 50%;
+            width:500px;
+            height: 500px;
+            background: linear-gradient(to right, #1CB5E0 , #3d3d78 );
+            z-index: -3;
+
+        }
+        .outerspan::after{
+            content: "";
+            position: absolute;
+            top: -18%;
+            left: -82%;
+            border-radius: 50%;
+            width: 700px;
+            height: 712px;
+            background: linear-gradient(to left, #83E3FE  , #3d3d78 );
+            z-index: -4;
+        }
         
      
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="iPhone">
-            <span class="first"></span>
-            <span class="second"></span>
-           
-        </div>
+      
+            <div class="iPhone">
+                <span class="first"></span>
+                <span class="second"></span>
+                <span class="third"></span>
+            </div>
+            <div class="outer">
+                <span class="outerspan"></span>
+            </div>
+        
+        
     </div>
 </body>
 </html>
